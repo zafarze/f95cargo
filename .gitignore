@@ -1,0 +1,21 @@
+# Секретные файлы и настройки
+.env
+
+# Базы данных и файлы сохранений
+*.pickle
+bot_persistence.pickle
+Dushanbe_Cargo.xlsx
+RohbarCargo.xlsx
+Kayhon.xlsx
+
+# Логи
+logs/
+*.log
+
+# Виртуальное окружение
+venv/
+env/
+
+# Системные файлы Python
+__pycache__/
+*.pyc

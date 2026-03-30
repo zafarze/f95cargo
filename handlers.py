@@ -2013,10 +2013,17 @@ async def process_excel_to_db(file_path: str) -> dict:
         logger.info(f"--- НАЧАЛО ЗАГРУЗКИ (СТРОГИЙ РЕЖИМ): {file_path} ---")
         
         try:
-            # Читаем файл. header=0 означает, что первая строка - это заголовки (мы их пропустим)
+            # Читаем файл как полноценный Excel
             df = pd.read_excel(file_path, header=0, dtype=str)
-        except:
-            df = pd.read_csv(file_path, header=0, dtype=str, sep=None, engine='python')
+        except Exception as e:
+            logger.warning(f"Не удалось прочитать как Excel, пробую как CSV... ({e})")
+            try:
+                # Сначала пробуем стандартный UTF-8
+                df = pd.read_csv(file_path, header=0, dtype=str, sep=None, engine='python', encoding='utf-8')
+            except UnicodeDecodeError:
+                # Если падает с ошибкой кодировки, пробуем кириллицу Windows (cp1251)
+                logger.warning("Ошибка кодировки UTF-8, пробую кодировку cp1251 (Windows)...")
+                df = pd.read_csv(file_path, header=0, dtype=str, sep=None, engine='python', encoding='cp1251')
 
         df = df.dropna(how='all')
         

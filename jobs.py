@@ -21,7 +21,9 @@ from db_utils import (
     upsert_order_from_excel,
     link_order_to_user,
     get_user,
-    get_order_by_track_code
+    get_order_by_track_code,
+    get_orders_pending_pickup_reminder,
+    set_pickup_reminder_sent
 )
 
 
@@ -133,3 +135,44 @@ async def reload_codes_job(context: ContextTypes.DEFAULT_TYPE) -> None:
             await notify_admins(context.bot, f"❌ CRITICAL Migration Job Error:\n{e}")
         except Exception as admin_e:
             logger.error(f"Failed to notify admins about migration error: {admin_e}")
+
+
+# === 3. ЗАДАЧА: НАПОМИНАНИЕ О САМОВЫВОЗЕ (ГРУЗ 3+ ДНЕЙ В ДУШАНБЕ) ===
+
+async def remind_pickup_job(context) -> None:
+    """
+    Ежедневно проверяет заказы в Душанбе 3+ дней
+    и отправляет напоминание если клиент не запросил доставку.
+    """
+    logger.info("Job: Checking for pickup reminders (cargo 3+ days in Dushanbe)...")
+    try:
+        orders = await get_orders_pending_pickup_reminder()
+        if not orders:
+            logger.info("Job: No pickup reminders needed.")
+            return
+
+        logger.info(f"Job: Found {len(orders)} orders needing pickup reminder.")
+        for order in orders:
+            await _send_pickup_reminder(context, order['user_id'], order['track_code'], order['language_code'])
+
+    except Exception as e:
+        logger.error(f"CRITICAL Pickup Reminder Job Error: {e}", exc_info=True)
+        try:
+            await notify_admins(context.bot, f"❌ CRITICAL Pickup Reminder Job Error:\n{e}")
+        except Exception:
+            pass
+
+async def _send_pickup_reminder(context, user_id: int, track_code: str, lang: str):
+    """(Утилита) Отправляет одно напоминание и помечает в БД."""
+    try:
+        from telegram.constants import ParseMode
+        message_text = get_text('pickup_reminder', lang).format(code=track_code)
+        await context.bot.send_message(
+            chat_id=user_id,
+            text=message_text,
+            parse_mode=ParseMode.HTML
+        )
+        await set_pickup_reminder_sent(track_code)
+        logger.info(f"Pickup reminder sent to user {user_id} for {track_code}")
+    except Exception as e:
+        logger.warning(f"Failed to send pickup reminder to {user_id} for {track_code}: {e}")

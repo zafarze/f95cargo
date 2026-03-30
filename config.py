@@ -34,17 +34,17 @@ else:
 # --- ID Администраторов ---
 ADMIN_USER_IDS = [
     515809298,   # Zafar
-    6884230661,   # khalid
+    1009549613,   # Firdavs
 
 ]
 
 logger.info(f"✅ Загружено {len(ADMIN_USER_IDS)} ID администраторов")
 
 # --- Настройки Файлов ---
-XLSX_FILENAME = "RohbarCargo.xlsx"
+XLSX_FILENAME = "f95cargo.xlsx"
 BACKUP_DIR = "backups"
 ACTIVE_USERS_STATS = "active_users"
-CHANNEL_USERNAME = "@rohbarcargo"
+CHANNEL_USERNAME = "@f95cargo"
 
 # --- Создание необходимых директорий ---
 try:
@@ -64,7 +64,7 @@ PHOTO_FILES = {
     "price_tg": "img/price_tj.png",
     "price": "price.jpg",
     "address_tajik": "img/address_tajik.jpg",
-    "address_china": "img/address_china.jpg"
+    "address_china": "img/address_china.jpeg"
 }
 
 # Языковые фото контактов

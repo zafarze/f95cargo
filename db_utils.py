@@ -227,6 +227,7 @@ def create_tables(conn):
                     
                     notify_dushanbe BOOLEAN DEFAULT FALSE,
                     notify_delivered BOOLEAN DEFAULT FALSE,
+                    notify_pickup_reminder BOOLEAN DEFAULT FALSE,
                     
                     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE SET NULL
                 );
@@ -241,6 +242,14 @@ def create_tables(conn):
             except psycopg2.Error as e:
                 conn.rollback() 
                 logger.warning(f"--- FIX --- Не удалось добавить user_id: {e}")
+
+            try:
+                cursor.execute("ALTER TABLE orders ADD COLUMN IF NOT EXISTS notify_pickup_reminder BOOLEAN DEFAULT FALSE;")
+                logger.info("--- FIX --- Колонка 'notify_pickup_reminder' в 'orders' проверена.")
+            except psycopg2.Error as e:
+                conn.rollback()
+                logger.warning(f"--- FIX --- Не удалось добавить notify_pickup_reminder: {e}")
+
 
             try:
                 cursor.execute("""
@@ -464,6 +473,29 @@ async def set_dushanbe_notification_sent(track_code):
     """Помечает, что уведомление о прибытии в Душанбе было отправлено."""
     query = "UPDATE orders SET notify_dushanbe = TRUE WHERE track_code = %s"
     return await asyncio.to_thread(execute_query, query, (track_code,), commit=True)
+
+async def get_orders_pending_pickup_reminder():
+    """
+    Возвращает заказы, которые уже 3+ дней в Душанбе,
+    клиент не запросил доставку и напоминание ещё не отправлялось.
+    """
+    query = """
+        SELECT o.track_code, o.user_id, u.language_code
+        FROM orders o
+        JOIN users u ON o.user_id = u.user_id
+        WHERE o.status_dushanbe IN ('В Душанбе', 'Dushanbe', 'Душанбе')
+          AND o.date_dushanbe <= CURRENT_DATE - INTERVAL '3 days'
+          AND (o.status_delivered IS NULL OR o.status_delivered NOT IN ('Запрошена', 'Доставлен'))
+          AND o.notify_pickup_reminder = FALSE
+          AND o.user_id IS NOT NULL
+    """
+    return await asyncio.to_thread(execute_query, query, fetchall=True)
+
+async def set_pickup_reminder_sent(track_code):
+    """Помечает, что напоминание о самовывозе отправлено."""
+    query = "UPDATE orders SET notify_pickup_reminder = TRUE WHERE track_code = %s"
+    return await asyncio.to_thread(execute_query, query, (track_code,), commit=True)
+
 
 # (!!!) ИЗМЕНЕНИЕ 3 из 3 (!!!)
 # Изменили логику 'status_delivered = ...' в 'ON CONFLICT'

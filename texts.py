@@ -14,21 +14,21 @@ TEXTS = {
         # --- (!!!) ИЗМЕНЕННЫЙ ТЕКСТ (!!!) ---
         "track_code_found_yiwu": (
             "Ассалому алейкум!\n"
-            "✅ Ваш груз с трек-кодом <b>{code}</b> принят на складе Rohbar Cargo в г. Иу.\n"
+            "✅ Ваш груз с трек-кодом <b>{code}</b> принят на складе F95 Cargo в г. Иу.\n"
             "🗓️ <b>Дата приёма:</b> {date}\n"
             "⏳ Срок доставки: 15-25 дней. Постараемся доставить Ваш груз раньше срока.\n\n"
-            "✨ Rohbar Cargo! Надежное, быстрое карго по доступной цене."
+            "✨ F95 Cargo! Надежное, быстрое карго по доступной цене."
         ),
         # --- (!!!) КОНЕЦ ИЗМЕНЕНИЯ (!!!) ---
 
         "track_code_found_dushanbe": (
             "Ассалому алейкум!\n"
-            "🚚 Ваш груз с трек-кодом <b>{code}</b> прибыл на склад Rohbar Cargo в г. Душанбе!\n"
+            "🚚 Ваш груз с трек-кодом <b>{code}</b> прибыл на склад F95 Cargo в г. Душанбе!\n"
             "🗓️ <b>Дата прибытия:</b> {date}\n\n"
-            "📞 Пожалуйста, свяжитесь с нами для получения груза: <code>+992777002827</code>.\n\n"
-            "✨ Rohbar Cargo! Надежное, быстрое карго по доступной цене."
+            "📞 Пожалуйста, свяжитесь с нами для получения груза: <code>+992 909 02 00 03</code>.\n\n"
+            "✨ F95 Cargo! Надежное, быстрое карго по доступной цене."
         ),
-        "track_code_not_found": "❌ Ваш груз пока не поступил на склад Rohbar Cargo в г. Иу.",
+        "track_code_not_found": "❌ Ваш груз пока не поступил на склад F95 Cargo в г. Иу.",
         "track_code_found_other": (
             "ℹ️ Статус вашего заказа <b>{code}</b>:\n"
             "<b>{status}</b>"
@@ -46,25 +46,30 @@ TEXTS = {
         "admin_notify_photo_not_found": "⚠️ Ошибка: Не найден файл фото '{photo_path}' при попытке отправки.",
         "dushanbe_arrival_notification": (
             "🚚 Уважаемый клиент!\n"
-            "Ваш груз с трек-кодом '{code}' прибыл на склад Rohbar Cargo в г. Душанбе!\n"
-            "📞 Пожалуйста, свяжитесь с нами для получения груза: +992 777 00 28 27."
+            "Ваш груз с трек-кодом '{code}' прибыл на склад F95 Cargo в г. Душанбе!\n"
+            "📞 Пожалуйста, свяжитесь с нами для получения груза: +992 909 02 00 03."
+        ),
+        "pickup_reminder": (
+            "⏰ Напоминание! Ваш груз с трек-кодом <b>{code}</b> уже несколько дней ждёт вас на складе в Душанбе.\n\n"
+            "🚚 Хотите заказать доставку? Откройте меню → Личный кабинет → Заказать доставку\n\n"
+            "📞 Или свяжитесь с нами: +992 909 02 00 03"
         ),
         "contacts": (
-            "Rohbar Cargo\n"
+            "F95 Cargo\n"
             "Режим работы: с 9:00 до 18:00\n"
             "Перерыв: с 12:45 до 14:00\n\n"
-            "Инстаграм: rohbarcargo"
+            "Инстаграм: f95cargo"
         ),
         "prices_text": (
             "🇨🇳 Китай — Таджикистан 🇹🇯\n"
             "🚛 Срок доставки: 15–20 дней\n\n"
             "💵 Стоимость доставки:\n"
-            "📦 2,8$ за кг\n"
-            "📦 250$ за куб\n\n"
+            "📦 2$ за кг\n"
+            "📦 220$ за куб\n\n"
             "📊 Тарифная сетка (по весу):\n"
-            "• от 1 до 20 кг — 2,8$ за кг\n"
-            "• от 21 до 30 кг — 2,6$ за кг\n"
-            "• от 31 кг и выше — 2,5$ за кг\n\n"
+            "• от 1 до 20 кг — 2,2$ за кг\n"
+            "• от 21 до 30 кг — 2,1$ за кг\n"
+            "• от 31 кг и выше — 2$ за кг\n\n"
             "📌 Крупногабаритные грузы рассчитываются по объёму (куб)"
         ),
         "forbidden_text": (
@@ -79,15 +84,15 @@ TEXTS = {
         "button_tajikistan": "🇹🇯 Адрес в Таджикистане",
         "address_caption_china": (
             "🏢 <b>Адрес в Китае:</b>\n\n"
-            "收货人: Rohbar\n"
-            "手机号: 16689986959\n"
-            "浙江省义乌市后宅街道洪华小区88栋5单元仓库5号门\n\n"
+            "收货人: F95cargo\n"
+            "手机号: 15267390323\n"
+            "浙江省义乌市福田街道长春八街95-97号\n\n"
             "📌 <b>Укажите ваше имя и номер телефона латинскими буквами (Name and Phone number in English)</b>"
         ),
         "address_caption_tajikistan": (
             "📍 <b>Наш адрес в Душанбе:</b>\n"
-            "Автоцентр\n\n"
-            "📞 Телефон: +992 777 00 28 27"
+            "Дусти Халкхо 47\n\n"
+            "📞 Телефон: +992 909 02 00 03"
         ),
         "image_received": "Изображение получено. Пока я не обрабатываю изображения, но могу помочь с чем-то другим! 😊",
         "error": "Произошла ошибка. Попробуйте снова или начните с /start.",
@@ -101,7 +106,7 @@ TEXTS = {
         "admin_broadcast_cancelled": "Рассылка отменена.",
         "admin_broadcast_report": "✅ Рассылка завершена.\nУспешно отправлено: {success}\nНе удалось: {failed}",
         "help_message": (
-            "👋 Здравствуйте! Я бот Rohbar Cargo.\n\n"
+            "👋 Здравствуйте! Я бот F95 Cargo.\n\n"
             "Используйте кнопки ниже для навигации:\n"
             "🔍 <b>Отследить трек-код:</b> Проверить статус вашего груза.\n"
             "📞 <b>Контакты:</b> Посмотреть наши контакты и режим работы.\n"
@@ -113,8 +118,8 @@ TEXTS = {
         ),
         
         # --- БЛОК ДЛЯ ПОДПИСКИ ---
-        "subscribe_prompt": "Чтобы продолжить, пожалуйста, подпишитесь на наш канал: @rohbarcargo",
-        "subscribe_button_channel": "Rohbar Cargo",
+        "subscribe_prompt": "Чтобы продолжить, пожалуйста, подпишитесь на наш канал: @f95cargo",
+        "subscribe_button_channel": "F95 Cargo",
         "subscribe_button_check": "Я подписался ✅",
         "checking_button": "Проверка...",
         "subscribe_fail": "Вы не подписаны. Пожалуйста, подпишитесь и нажмите 'Проверить'.",
@@ -263,21 +268,21 @@ TEXTS = {
         # --- (!!!) ИЗМЕНЕННЫЙ ТЕКСТ (!!!) ---
         "track_code_found_yiwu": (
             "Assalomu alaykum!\n"
-            "✅ Your cargo with track code <b>{code}</b> has been received at the Rohbar Cargo warehouse in Yiwu city.\n"
+            "✅ Your cargo with track code <b>{code}</b> has been received at the F95 Cargo warehouse in Yiwu city.\n"
             "🗓️ <b>Date of acceptance:</b> {date}\n"
             "⏳ Delivery time: 15-25 days. We will try to deliver your cargo ahead of schedule.\n\n"
-            "✨ Rohbar Cargo! Reliable, fast cargo at an affordable price."
+            "✨ F95 Cargo! Reliable, fast cargo at an affordable price."
         ),
         # --- (!!!) КОНЕЦ ИЗМЕНЕНИЯ (!!!) ---
 
         "track_code_found_dushanbe": (
             "Assalomu alaykum!\n"
-            "🚚 Your cargo with track code <b>{code}</b> has arrived at the Rohbar Cargo warehouse in Dushanbe!\n"
+            "🚚 Your cargo with track code <b>{code}</b> has arrived at the F95 Cargo warehouse in Dushanbe!\n"
             "🗓️ <b>Date of arrival:</b> {date}\n\n"
-            "📞 Please contact us to pick up your cargo: <code>+992777002827</code>.\n\n"
-            "✨ Rohbar Cargo! Reliable, fast cargo at an affordable price."
+            "📞 Please contact us to pick up your cargo: <code>+992 909 02 00 03</code>.\n\n"
+            "✨ F95 Cargo! Reliable, fast cargo at an affordable price."
         ),
-        "track_code_not_found": "❌ Your cargo has not yet arrived at the Rohbar Cargo warehouse in Yiwu.",
+        "track_code_not_found": "❌ Your cargo has not yet arrived at the F95 Cargo warehouse in Yiwu.",
         "track_code_found_other": (
             "ℹ️ Status of your order <b>{code}</b>:\n"
             "<b>{status}</b>"
@@ -295,26 +300,31 @@ TEXTS = {
         "admin_notify_photo_not_found": "⚠️ Error: Photo file '{photo_path}' not found when attempting to send.",
         "dushanbe_arrival_notification": (
             "🚚 Dear Customer!\n"
-            "Your cargo with track code '{code}' has arrived at the Rohbar Cargo warehouse in Dushanbe!\n"
-            "📞 Please contact us to pick up your cargo: +992 777 00 28 27."
+            "Your cargo with track code '{code}' has arrived at the F95 Cargo warehouse in Dushanbe!\n"
+            "📞 Please contact us to pick up your cargo: +992 909 02 00 03."
+        ),
+        "pickup_reminder": (
+            "⏰ Reminder! Your cargo with track code <b>{code}</b> has been waiting for you at the Dushanbe warehouse for several days.\n\n"
+            "🚚 Want to order delivery? Open menu → Personal Cabinet → Request Delivery\n\n"
+            "📞 Or contact us: +992 909 02 00 03"
         ),
         "contacts": (
-            "Rohbar Cargo\n"
+            "F95 Cargo\n"
             "Working hours: 9:00 to 18:00\n"
             "Break: 12:45 to 14:00\n\n"
-            "📞 Phone: <code>+992777002827</code>\n"
-            "Instagram: rohbarcargo"
+            "📞 Phone: <code>+992 909 02 00 03</code>\n"
+            "Instagram: f95cargo"
         ),
         "prices_text": (
             "🇨🇳 China — Tajikistan 🇹🇯\n"
             "🚛 Delivery time: 15–20 days\n\n"
             "💵 Shipping rates:\n"
-            "📦 $2.8 per kg\n"
-            "📦 $250 per cubic meter\n\n"
+            "📦 $2 per kg\n"
+            "📦 $220 per cubic meter\n\n"
             "📊 Weight-based pricing:\n"
-            "• 1–20 kg — $2.8 per kg\n"
-            "• 21–30 kg — $2.6 per kg\n"
-            "• 31 kg and above — $2.5 per kg\n\n"
+            "• 1–20 kg — $2.2 per kg\n"
+            "• 21–30 kg — $2.1 per kg\n"
+            "• 31 kg and above — $2 per kg\n\n"
             "📌 Oversized cargo is calculated by volume (cubic meter)"
         ),
         "forbidden_text": (
@@ -329,15 +339,15 @@ TEXTS = {
         "button_tajikistan": "🇹🇯 Address in Tajikistan",
         "address_caption_china": (
             "🏢 <b>Address in China:</b>\n\n"
-            "收货人: Rohbar\n"
-            "手机号: 16689986959\n"
-            "浙江省义乌市后宅街道洪华小区88栋5单元仓库5号门\n\n"
+            "收货人: F95cargo\n"
+            "手机号: 15267390323\n"
+            "浙江省义乌市福田街道长春八街95-97号\n\n"
             "📌 <b>Please write your Name and Phone number in English</b>"
         ),
         "address_caption_tajikistan": (
             "📍 <b>Our address in Dushanbe:</b>\n"
-            "Autocenter\n\n"
-            "📞 Phone: +992 777 00 28 27"
+            "Dusti Khalqho 47\n\n"
+            "📞 Phone: +992 909 02 00 03"
         ),
         "image_received": "Image received. I can't process images yet, but I can help with something else! 😊",
         "error": "An error occurred. Please try again or start with /start.",
@@ -351,7 +361,7 @@ TEXTS = {
         "admin_broadcast_cancelled": "Broadcast cancelled.",
         "admin_broadcast_report": "✅ Broadcast finished.\nSent successfully: {success}\nFailed: {failed}",
         "help_message": (
-            "👋 Hello! I am Rohbar Cargo Bot.\n\n"
+            "👋 Hello! I am F95 Cargo Bot.\n\n"
             "Use the buttons below to navigate:\n"
             "🔍 <b>Track code:</b> Check the status of your cargo.\n"
             "📞 <b>Contacts:</b> View our contact details and working hours.\n"
@@ -363,8 +373,8 @@ TEXTS = {
         ),
         
         # --- SUBSCRIPTION BLOCK ---
-        "subscribe_prompt": "To continue, please subscribe to our channel: @rohbarcargo",
-        "subscribe_button_channel": "Rohbar Cargo",
+        "subscribe_prompt": "To continue, please subscribe to our channel: @f95cargo",
+        "subscribe_button_channel": "F95 Cargo",
         "subscribe_button_check": "I subscribed ✅",
         "checking_button": "Checking...",
         "subscribe_fail": "You are not subscribed. Please subscribe and press 'Check'.",
@@ -505,7 +515,7 @@ TEXTS = {
         # --- (!!!) ИЗМЕНЕННЫЙ ТЕКСТ (!!!) ---
         "track_code_found_yiwu": (
             "Ассалому алайкум!\n"
-            "✅ Бори шумо бо трек-коди <b>{code}</b> дар анбори Rohbar Cargo дар ш. Иву қабул карда шуд.\n"
+            "✅ Бори шумо бо трек-коди <b>{code}</b> дар анбори F95 Cargo дар ш. Иву қабул карда шуд.\n"
             "🗓️ <b>Санаи қабул:</b> {date}\n"
             "⏳ Мӯҳлати тахминии расонидан: 15-25 рӯз. Мо кӯшиш мекунем, ки бори Шуморо пеш аз мӯҳлат расонем.\n\n"
             "✨ Кайҳон Карго! Каргои боэтимод, зуд ва бо нархи дастрас."
@@ -514,12 +524,12 @@ TEXTS = {
 
         "track_code_found_dushanbe": (
             "Ассалому алайкум!\n"
-            "🚚 Бори шумо бо трек-коди <b>{code}</b> ба анбори Rohbar Cargo дар ш. Душанбе расид!\n"
+            "🚚 Бори шумо бо трек-коди <b>{code}</b> ба анбори F95 Cargo дар ш. Душанбе расид!\n"
             "🗓️ <b>Санаи расидан:</b> {date}\n\n"
-            "📞 Лутфан барои гирифтани бор бо мо тамос гиред: <code>+992777002827</code>.\n\n"
+            "📞 Лутфан барои гирифтани бор бо мо тамос гиред: <code>+992 909 02 00 03</code>.\n\n"
             "✨ Кайҳон Карго! Каргои боэтимод, зуд ва бо нархи дастрас."
         ),
-        "track_code_not_found": "❌ Бори Шумо то ҳол дар анбори Rohbar Cargo дар ш. Иву наомадааст.",
+        "track_code_not_found": "❌ Бори Шумо то ҳол дар анбори F95 Cargo дар ш. Иву наомадааст.",
         "track_code_found_other": (
             "ℹ️ Ҳолати фармоиши шумо <b>{code}</b>:\n"
             "<b>{status}</b>"
@@ -537,25 +547,30 @@ TEXTS = {
         "admin_notify_photo_not_found": "⚠️ Хатогӣ: Файли акси '{photo_path}' ҳангоми кӯшиши фиристодан ёфт нашуд.",
         "dushanbe_arrival_notification": (
             "🚚 Мизоҷи муҳтарам!\n"
-            "Бори шумо бо трек-коди '{code}' ба анбори Rohbar Cargo дар ш. Душанбе расид!\n"
-            "📞 Лутфан барои гирифтани бор бо мо тамос гиред: +992 777 00 28 27."
+            "Бори шумо бо трек-коди '{code}' ба анбори F95 Cargo дар ш. Душанбе расид!\n"
+            "📞 Лутфан барои гирифтани бор бо мо тамос гиред: +992 909 02 00 03."
+        ),
+        "pickup_reminder": (
+            "⏰ Еслоба! Бори шумо бо трек-коди <b>{code}</b> чанд рӯз аст дар анбори Душанбе мунтазир аст.\n\n"
+            "🚚 Дархости расонидан мехоҳед? Меню → Утоқи шахсӣ → Дархости расонидан\n\n"
+            "📞 Я бо мо тамос гиред: +992 909 02 00 03"
         ),
         "contacts": (
-            "Rohbar Cargo\n"
+            "F95 Cargo\n"
             "Реҷаи кори: аз 9:00 то 18:00\n"
             "Танаффус: аз 12:45 до 14:00\n\n"
-            "Инстаграм: rohbarcargo"
+            "Инстаграм: f95cargo"
         ),
         "prices_text": (
             "🇨🇳 Хитой — Тоҷикистон 🇹🇯\n"
             "🚛 Мӯҳлати расонидан: 15–20 рӯз\n\n"
             "💵 Нархи расонидан:\n"
-            "📦 2,8$ барои як кг\n"
-            "📦 250$ барои як куб\n\n"
+            "📦 2$ барои як кг\n"
+            "📦 220$ барои як куб\n\n"
             "📊 Тарифи вазнӣ:\n"
-            "• аз 1 то 20 кг — 2,8$ барои як кг\n"
-            "• аз 21 то 30 кг — 2,6$ барои як кг\n"
-            "• аз 31 кг ва боло — 2,5$ барои як кг\n\n"
+            "• аз 1 то 20 кг — 2,2$ барои як кг\n"
+            "• аз 21 то 30 кг — 2,1$ барои як кг\n"
+            "• аз 31 кг ва боло — 2$ барои як кг\n\n"
             "📌 Борҳои калонҳаҷм тибқи ҳаҷм (куб) ҳисоб карда мешаванд"
         ),
         "forbidden_text": (
@@ -570,15 +585,15 @@ TEXTS = {
         "button_tajikistan": "🇹🇯 Суроға дар Тоҷикистон",
         "address_caption_china": (
             "🏢 <b>Суроға дар Хитой:</b>\n\n"
-            "收货人: Rohbar\n"
-            "手机号: 16689986959\n"
-            "浙江省义乌市后宅街道洪华小区88栋5单元仓库5号门\n\n"
+            "收货人: F95cargo\n"
+            "手机号: 15267390323\n"
+            "浙江省义乌市福田街道长春八街95-97号\n\n"
             "📌 <b>Ном ва рақами телефони худро бо ҳарфҳои англисӣ нависед (Name and Phone number in English)</b>"
         ),
         "address_caption_tajikistan": (
             "📍 <b>Суроғаи мо дар Душанбе:</b>\n"
-            "Автоцентр\n\n"
-            "📞 Телефон: +992 777 00 28 27"
+            "Дусти Халкхо 47\n\n"
+            "📞 Телефон: +992 909 02 00 03"
         ),
         "image_received": "Тасвир қабул шуд. Ман ҳоло тасвирҳоро коркард намекунам, аммо метавонам бо чизи дигар кӯмак кунам! 😊",
         "error": "Хатогӣ рух дод. Лутфан боз кӯшиш кунед ё аз /start оғоз кунед.",
@@ -592,7 +607,7 @@ TEXTS = {
         "admin_broadcast_cancelled": "Ирсол бекор карда шуд.",
         "admin_broadcast_report": "✅ Ирсол анҷом ёфт.\nБомуваффақият фиристода шуд: {success}\nФиристода нашуд: {failed}",
         "help_message": (
-            "👋 Ассалому алайкум! Ман боти Rohbar Cargo.\n\n"
+            "👋 Ассалому алайкум! Ман боти F95 Cargo.\n\n"
             "Барои паймоиш тугмаҳои зеринро истифода баред:\n"
             "🔍 <b>Трек-код:</b> Санҷиши ҳолати бори шумо.\n"
             "📞 <b>Тамос:</b> Дидани маълумоти тамос ва реҷаи кории мо.\n"
@@ -604,8 +619,8 @@ TEXTS = {
         ),
         
         # --- БЛОК ДЛЯ ПОДПИСКИ ---
-        "subscribe_prompt": "Барои идома, лутфан ба канали мо обуна шавед: @rohbarcargo",
-        "subscribe_button_channel": "Rohbar Cargo",
+        "subscribe_prompt": "Барои идома, лутфан ба канали мо обуна шавед: @f95cargo",
+        "subscribe_button_channel": "F95 Cargo",
         "subscribe_button_check": "Ман обуна шудам ✅",
         "checking_button": "Санҷида мешавад...",
         "subscribe_fail": "Шумо обуна нашудаед. Лутфан обуна шавед ва 'Санҷиш'-ро пахш кунед.",

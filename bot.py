@@ -50,7 +50,8 @@ from handlers import (
 )
 from jobs import (
     reload_codes_job,
-    notify_dushanbe_arrival_job
+    notify_dushanbe_arrival_job,
+    remind_pickup_job
 )
 from db_utils import init_db_pool, close_db_pool
 
@@ -227,6 +228,19 @@ def main() -> None:
             logger.info("✅ Задача 'notify_dushanbe' включена.")
         except Exception as e:
             logger.error(f"❌ Ошибка при добавлении задачи notify_dushanbe: {e}")
+
+    # Напоминание о самовывозе (груз 3+ дней в Душанбе) — ОТКЛЮЧЕНО
+    # Чтобы включить: раскомментировать блок ниже
+    # try:
+    #     job_queue.run_repeating(
+    #         remind_pickup_job,
+    #         interval=86400,   # Раз в сутки
+    #         first=60,         # Первый запуск через 60 сек.
+    #         name="job_remind_pickup"
+    #     )
+    #     logger.info("✅ Задача 'remind_pickup' включена (раз в сутки).")
+    # except Exception as e:
+    #     logger.error(f"❌ Ошибка при добавлении задачи remind_pickup: {e}")
 
     try:
         application.add_handler(MessageHandler(filters.Document.ALL, document_handler), group=0)

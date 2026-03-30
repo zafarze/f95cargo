@@ -86,9 +86,9 @@ from db_utils import (
 from texts import TEXTS
 from admin_utils import notify_admins
 
-CONTACT_PHONE = "+992777002827"
-CONTACT_INSTAGRAM = "rohbarcargo"
-CONTACT_INSTAGRAM_URL = "https://www.instagram.com/rohbarcargo"
+CONTACT_PHONE = "+992909020003"
+CONTACT_INSTAGRAM = "F95cargo"
+CONTACT_INSTAGRAM_URL = "https://www.instagram.com/F95cargo"
 
 def create_admin_regex(key_index_tuple):
     """
@@ -717,7 +717,7 @@ async def show_address_callback(update: Update, context: ContextTypes.DEFAULT_TY
             btn_video = "🎬 Видео роҳбалад (Зер кунед)"
             btn_map = "🗺 Харитаи Яндекс"
 
-        YANDEX_MAP_URL = "https://yandex.ru/maps/org/144545471860?si=zafarze"
+        YANDEX_MAP_URL = "https://yandex.ru/maps?whatshere%5Bpoint%5D=68.80115912695844%2C38.57415557386223&whatshere%5Bzoom%5D=16.0&ll=68.80147703204655%2C38.57502679530826&z=16.0&si=zafarze"
 
         keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton(btn_map, url=YANDEX_MAP_URL)],
